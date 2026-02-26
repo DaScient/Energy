@@ -1,0 +1,10 @@
+{
+  "repo": "dascient-energy-weather-interop-suite",
+  "created_utc": "2026-02-26T21:32:20Z",
+  "included_notebooks": [
+    "notebooks/DaScient_DeepGenAI_Analytics_OpenSource_Metrics_Package.ipynb",
+    "notebooks/DaScient_DataCenter_Interop_EnergyCrisis_Notebook.ipynb",
+    "notebooks/DaScient_Weather_News_Energy_DataCenter_Planning.ipynb"
+  ],
+  "missing_notebooks": []
+}

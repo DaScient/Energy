@@ -1,0 +1,10 @@
+numpy
+pandas
+matplotlib
+requests
+feedparser
+python-dateutil
+scipy
+scikit-learn
+pytest
+jupyterlab
