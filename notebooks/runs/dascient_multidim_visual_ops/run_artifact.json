@@ -1,0 +1,10 @@
+{
+  "exports": [
+    "fig_3d_risk_space.html",
+    "fig_surface_cooling.html",
+    "fig_parallel_coordinates.html"
+  ],
+  "n_rows": 20160,
+  "panel_csv": "runs/dascient_multidim_visual_ops/risk_panel.csv",
+  "run_ts_utc": "2026-02-27T16:39:32Z"
+}

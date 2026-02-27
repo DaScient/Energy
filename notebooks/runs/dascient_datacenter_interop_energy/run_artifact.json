@@ -1,0 +1,23 @@
+{
+  "baseline_co2e_kg": 10148928.189442532,
+  "co2e_g_per_request_p50": 0.01018886130389976,
+  "co2e_reduction_pct": 0.12873610513029035,
+  "joules_per_request_p50": 122.08996307141356,
+  "n_rows": 28800,
+  "pue_median": 1.2537613919858779,
+  "shifted_co2e_kg": 10135862.854578974,
+  "sites": [
+    "DFW-1",
+    "IAD-2",
+    "PDX-1",
+    "SLC-1"
+  ],
+  "ts_utc": "2026-02-27T16:21:01Z",
+  "workloads": [
+    "Ads",
+    "Inference",
+    "Search",
+    "Storage",
+    "Training"
+  ]
+}
