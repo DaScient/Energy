@@ -1,0 +1,19 @@
+{
+  "rss_item": {
+    "title": "str",
+    "link": "str",
+    "summary": "str",
+    "published_raw": "str",
+    "source": "str",
+    "feed_url": "str",
+    "id": "str"
+  },
+  "weather_hourly": {
+    "time_utc": "datetime",
+    "temp_c": "float",
+    "rh_pct": "float",
+    "dew_c": "float",
+    "wind_ms": "float",
+    "precip_mm": "float"
+  }
+}
