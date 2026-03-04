@@ -1,0 +1,20 @@
+# Minimal EWIS run configuration
+engine:
+  allow_side_effects: false
+  plugin_timeout_s: 10
+
+plugins:
+  builtins:
+    - ewis.plugins.builtin.weather_rss:WeatherRssPlugin
+    - ewis.plugins.builtin.cooling_optimizer:CoolingOptimizerPlugin
+
+telemetry:
+  datacenter_id: "DC-US-WEST"
+  region: "CAISO"
+  timestamp_utc: "2026-03-03T12:00:00Z"
+  power_mw: 32.5
+  it_load_mw: 26.2
+  pue: 1.24
+  base_grid_load_mw: 28500
+  grid_capacity_mw: 52000
+  carbon_intensity_kgco2_per_mwh: 180

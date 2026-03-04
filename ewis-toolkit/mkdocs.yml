@@ -1,0 +1,14 @@
+site_name: EWIS Toolkit
+repo_name: DaScient/ewis-toolkit
+theme:
+  name: material
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+nav:
+  - Overview: index.md
+  - Architecture: architecture.md
+  - Plugins: plugins.md
+  - Metrics: metrics.md
+  - CLI: cli.md

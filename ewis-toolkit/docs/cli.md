@@ -1,0 +1,3 @@
+## CLI
+
+ewis --help
