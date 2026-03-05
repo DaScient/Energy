@@ -1,7 +1,7 @@
 # EWIS Technical Specification
 
 Version: 1.0.0  
-Status: Draft (publish-ready)  
+Status: DaScient, LLC Proprietary I
 Last updated: 2026-03-03
 
 ## 1. Scope
