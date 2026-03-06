@@ -1,0 +1,18 @@
+site_name: PHIAK
+repo_name: DaScient/public-health-infra-analytics-kit
+theme:
+  name: material
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+nav:
+  - Overview: index.md
+  - Architecture: architecture.md
+  - Payloads: payloads.md
+  - Metrics: metrics.md
+  - Privacy: privacy.md
+  - Governance: governance.md
+  - Threat model: threat-model.md
+  - Dashboard: dashboard.md
+  - CLI: cli.md

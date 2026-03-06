@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "public-health-infra-analytics-kit"
+version = "0.1.0"
+description = "PHIAK: privacy-aware, aggregated public health infrastructure analytics"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "DaScient"}]
+keywords = ["public health", "syndromic", "wastewater", "capacity", "privacy", "analytics", "epidemiology"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Healthcare Industry",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+  "pydantic>=2.5",
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "PyYAML>=6.0",
+  "rich>=13.6",
+  "typer>=0.9",
+]
+
+[project.optional-dependencies]
+vis = [
+  "plotly>=5.18",
+  "matplotlib>=3.8",
+]
+dev = [
+  "pytest>=7.4",
+  "pytest-cov>=4.1",
+  "ruff>=0.4.0",
+  "black>=24.1",
+  "mypy>=1.8",
+  "pre-commit>=3.6",
+]
+
+[project.scripts]
+phiak = "phiak.cli:app"
+
+[project.entry-points."phiak.plugins"]
+# Third-party plugins can register here.
+# Example:
+# local_lab = "phiak_plugin_local.lab:LocalLabPlugin"
+
+[tool.setuptools]
+packages = {find = {include = ["phiak*"]}}
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "I", "B", "UP", "N", "W"]
+ignore = ["E501"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+strict_optional = true
+exclude = ["notebooks", "docs", "site", "dist", "build"]

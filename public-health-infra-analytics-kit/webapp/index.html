@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>PHIAK Dashboard</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="title">PHIAK Dashboard</div>
+      <div class="subtitle">Aggregated public health ops analytics</div>
+    </div>
+    <div class="controls">
+      <button id="reloadBtn" class="btn">Reload report</button>
+      <a class="btn secondary" href="../docs/privacy.md" target="_blank" rel="noreferrer">Privacy</a>
+      <a class="btn secondary" href="../README.md" target="_blank" rel="noreferrer">README</a>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="card wide">
+      <h2>Inputs summary</h2>
+      <div id="inputs" class="kv"></div>
+      <div class="hint">Source: <code>reports/latest_report.json</code></div>
+    </section>
+
+    <section class="card">
+      <h2>Early warning</h2>
+      <div id="ewi" class="kpi-grid"></div>
+      <div class="hint muted">EWI is triage. It is not a diagnosis.</div>
+    </section>
+
+    <section class="card">
+      <h2>Trends</h2>
+      <div id="chart1" class="chart"></div>
+    </section>
+
+    <section class="card wide">
+      <h2>Plugin outputs</h2>
+      <div id="plugins" class="table"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>Contact: {subject}@dascient.com</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

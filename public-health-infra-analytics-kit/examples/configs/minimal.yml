@@ -1,0 +1,18 @@
+engine:
+  allow_side_effects: false
+  plugin_timeout_s: 10
+  suppression_k: 11
+
+plugins:
+  builtins:
+    - phiak.plugins.builtin.small_cell_suppression:SmallCellSuppressionPlugin
+    - phiak.plugins.builtin.early_warning:EarlyWarningPlugin
+
+inputs:
+  incidence_path: "examples/data/incidence_sample.csv"
+  capacity_path: "examples/data/capacity_sample.csv"
+  wastewater_path: "examples/data/wastewater_sample.csv"
+
+context:
+  population_by_geo:
+    COUNTY-EXAMPLE: 450000
