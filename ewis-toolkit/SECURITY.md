@@ -6,7 +6,7 @@ EWIS is under active development. Security fixes are provided for the most recen
 ## Reporting a Vulnerability
 Please do not open a public issue for security vulnerabilities.
 
-Email: aristocles24@gmail.com  
+Email: security@dascient.com  
 Subject: [EWIS SECURITY] <short summary>
 
 Include:
