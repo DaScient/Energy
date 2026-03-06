@@ -1,0 +1,16 @@
+site_name: WOIK
+repo_name: DaScient/water-ops-interop-kit
+theme:
+  name: material
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+nav:
+  - Overview: index.md
+  - Architecture: architecture.md
+  - Payload: payload.md
+  - Metrics: metrics.md
+  - Plugins: plugins.md
+  - Dashboard: dashboard.md
+  - CLI: cli.md

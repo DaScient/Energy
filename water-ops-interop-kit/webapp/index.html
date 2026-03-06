@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>WOIK Dashboard</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="title">WOIK Dashboard</div>
+      <div class="subtitle">Water Ops Interoperability Kit</div>
+    </div>
+    <div class="controls">
+      <button id="reloadBtn" class="btn">Reload report</button>
+      <a class="btn secondary" href="../README.md" target="_blank" rel="noreferrer">Repo README</a>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="card">
+      <h2>Summary</h2>
+      <div id="summary" class="kv"></div>
+      <div class="hint">Source: <code>reports/latest_report.json</code></div>
+    </section>
+
+    <section class="card">
+      <h2>KPIs</h2>
+      <div id="kpis" class="kpi-grid"></div>
+    </section>
+
+    <section class="card">
+      <h2>Metrics</h2>
+      <div id="metricsTable" class="table"></div>
+    </section>
+
+    <section class="card">
+      <h2>Plugin outputs</h2>
+      <div id="plugins" class="table"></div>
+    </section>
+
+    <section class="card">
+      <h2>Charts</h2>
+      <div class="chart-row">
+        <div id="chart1" class="chart"></div>
+        <div id="chart2" class="chart"></div>
+      </div>
+      <div class="hint">Charts are illustrative. For time series analysis, use notebooks and export a windowed report.</div>
+    </section>
+
+    <section class="card">
+      <h2>Events</h2>
+      <div id="events" class="table"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>WOIK is an interoperability toolkit. It does not control infrastructure by default.</div>
+    <div>Contact: {subject}@dascient.com</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
