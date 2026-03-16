@@ -2,7 +2,7 @@
 
 ### The DaScient Integrated Infrastructure Suite (EWIS, WOIK, PHIAK)
 
-ARES-E is a unified, notebook-first evaluation harness and toolkit designed to standardize telemetry, events, and operational metrics across the "Critical Quad" of national security: **Data/Energy, Water, and Public Health.** This suite provides the deterministic engines, plug-in architectures, and privacy-aware schemas necessary to evaluate AI agents and human-machine teams under real-world operational stress.
+ARES-E is a unified evaluation harness and toolkit designed to standardize telemetry, events, and operational metrics across the "Critical Quad" of national security: **Data/Energy, Water, and Public Health.** This suite provides the deterministic engines, plug-in architectures, and privacy-aware schemas necessary to evaluate AI agents and human-machine teams under real-world operational stress.
 
 
 ## EWIS: Energy, Weather, and Interoperability Suite
@@ -22,7 +22,7 @@ EWIS is a plug-and-play Python toolkit for operators and researchers managing th
 
 * **Extensible Plugin Framework:** Support for Python entry points and local plugin discovery for "hot-swappable" industry adapters.
 * **CLI Diagnostics:** Command-line interface for rapid batch runs and system diagnostics.
-* **Visualization Helpers:** Plotly-first (interactive) and Matplotlib (fallback) support for notebook-based analytics.
+* **Visualization Helpers:** Plotly-first (interactive) and Matplotlib (fallback) support for analytics.
 
 
 ## WOIK: Water Ops Interoperability Kit
@@ -76,7 +76,7 @@ All three kits share a "Plugin Contract," allowing different teams to integrate 
 
 ### Deployment & Interoperability
 
-* **Notebook-First:** Designed for Data Scientists and Researchers to iterate in Jupyter/VS Code.
+* **Notebook-ready:** Designed for Data Scientists and Researchers to iterate in Jupyter/VS Code.
 * **Air-Gapped Ready:** All dashboards and reports are generated as static files, requiring zero internet connectivity for visualization.
 * **Vendor Agnostic:** Standardizes payload schemas so that any AI model or agent can be evaluated against these metrics via the ARES-E harness.
 
@@ -90,7 +90,7 @@ For inquiries regarding DIU CSO teaming or implementation, contact: `ARES-E@dasc
 
 # DaScient Energy, Weather, and Interoperability Suite
 
-A notebook-first toolkit for:
+A notebook-ready toolkit for:
 
 - Deep and Generative AI analytics and open-source metrics design
 - Data center interoperability performance metrics and mitigation protocols under energy and grid stress
