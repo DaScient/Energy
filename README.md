@@ -5,7 +5,7 @@
 ARES-E is a unified evaluation harness and toolkit designed to standardize telemetry, events, and operational metrics across the "Critical Quad" of national security: **Data/Energy, Water, and Public Health.** This suite provides the deterministic engines, plug-in architectures, and privacy-aware schemas necessary to evaluate AI agents and human-machine teams under real-world operational stress.
 
 
-## EWIS: Energy, Weather, and Interoperability Suite
+## [EWIS: Energy, Weather, and Interoperability Suite](https://github.com/DaScient/Energy/tree/main/ewis-toolkit)
 
 **Focus:** Data Center Planning, Grid Operations, and AI Workload Efficiency.
 
@@ -25,7 +25,7 @@ EWIS is a plug-and-play Python toolkit for operators and researchers managing th
 * **Visualization Helpers:** Plotly-first (interactive) and Matplotlib (fallback) support for analytics.
 
 
-## WOIK: Water Ops Interoperability Kit
+## [WOIK: Water Ops Interoperability Kit](https://github.com/DaScient/Energy/tree/main/water-ops-interop-kit)
 
 **Focus:** Water Treatment, Distribution, and Hydraulic Operational Metrics.
 
@@ -45,7 +45,7 @@ WOIK standardizes telemetry and events across municipal and industrial water inf
 * **Pydantic Schema Enforcement:** Ensures data integrity across heterogeneous sensor networks.
 
 
-## PHIAK: Public Health Infrastructure Analytics Kit
+## [PHIAK: Public Health Infrastructure Analytics Kit](https://github.com/DaScient/Energy/tree/main/public-health-infra-analytics-kit)
 
 **Focus:** Privacy-Aware Health Operations and Early Warning Systems.
 
@@ -101,6 +101,10 @@ A notebook-ready toolkit for:
 - `notebooks/DaScient_DeepGenAI_Analytics_OpenSource_Metrics_Package.ipynb`
 - `notebooks/DaScient_DataCenter_Interop_EnergyCrisis_Notebook.ipynb`
 - `notebooks/DaScient_Weather_News_Energy_DataCenter_Planning.ipynb`
+- `ewis-toolkit/notebooks/01_grid_stress_eda.ipynb`
+- `ewis-toolkit/notebooks/02_genai_metrics.ipynb`
+- `public-health-infra-analytics-kit/notebooks/00_PHIAK_Tour.ipynb`
+- `water-ops-interop-kit/notebooks/00_WOIK_Tour.ipynb`
 
 ## Quickstart
 
