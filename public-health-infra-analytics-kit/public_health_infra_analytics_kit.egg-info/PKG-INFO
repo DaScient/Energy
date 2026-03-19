@@ -1,0 +1,151 @@
+Metadata-Version: 2.4
+Name: public-health-infra-analytics-kit
+Version: 0.1.0
+Summary: PHIAK: privacy-aware, aggregated public health infrastructure analytics
+Author: DaScient
+License: MIT License
+        
+        Copyright (c) 2026 DaScient
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Keywords: public health,syndromic,wastewater,capacity,privacy,analytics,epidemiology
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic>=2.5
+Requires-Dist: numpy>=1.24
+Requires-Dist: pandas>=2.0
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: rich>=13.6
+Requires-Dist: typer>=0.9
+Provides-Extra: vis
+Requires-Dist: plotly>=5.18; extra == "vis"
+Requires-Dist: matplotlib>=3.8; extra == "vis"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4; extra == "dev"
+Requires-Dist: pytest-cov>=4.1; extra == "dev"
+Requires-Dist: ruff>=0.4.0; extra == "dev"
+Requires-Dist: black>=24.1; extra == "dev"
+Requires-Dist: mypy>=1.8; extra == "dev"
+Requires-Dist: pre-commit>=3.6; extra == "dev"
+Dynamic: license-file
+
+# Public Health Infrastructure Analytics Kit (PHIAK)
+
+[![CI](https://github.com/DaScient/public-health-infra-analytics-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/DaScient/public-health-infra-analytics-kit/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
+
+PHIAK is a plug-in oriented toolkit for privacy-aware, aggregated public health operations analytics.
+
+It helps local and regional teams standardize and analyze:
+- capacity signals (ED beds, ICU occupancy, ventilators, staffing, supply)
+- incidence signals (cases, tests, positivity, ED ILI, RSV, COVID, norovirus)
+- early warning signals (syndromic surveillance, wastewater measurements, outbreak indicators)
+
+PHIAK ships with:
+- strict aggregate payload schemas (Pydantic) with privacy checks
+- a deterministic engine and plug-in system
+- reference metrics and early warning indices
+- a CLI for batch runs and report generation
+- a static dashboard (HTML + JS + CSS) that reads report JSON and can run air gapped
+- example datasets and configs
+- documentation focused on privacy, limitations, and safe use
+
+Contact: {subject}@dascient.com
+
+## Guardrails (non-negotiable)
+
+PHIAK is designed to avoid harm:
+- No individual-level data, identifiers, free text clinical notes, or address-level geolocation
+- Aggregation required by design (counts, rates, rolling summaries)
+- Optional minimum cell count suppression for small numbers
+- Documentation required for each metric, data source, and reporting limitation
+
+See: `docs/privacy.md` and `spec.md`.
+
+## Install
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -U pip
+pip install -e ".[dev,vis]"
+```
+
+## Quick start
+
+1) Generate a report:
+```bash
+phiak diagnose --config examples/configs/minimal.yml --out reports/latest_report.json
+```
+
+2) Serve the dashboard:
+```bash
+python -m http.server 8080
+# open http://localhost:8080/webapp/
+```
+
+The dashboard reads `reports/latest_report.json` and renders:
+- inputs summary and suppression policy
+- early warning index and alert flag
+- robust trend bars (incidence, syndromic, wastewater, capacity)
+- plugin outputs table
+
+## Data model overview
+
+PHIAK defines three aggregate payload families:
+- IncidencePayload (daily or weekly)
+- CapacityPayload (daily or weekly)
+- WastewaterPayload (daily or weekly)
+
+These are loaded from CSV in the reference pipeline. Plug-ins can adapt other sources.
+
+## Privacy posture
+
+PHIAK includes:
+- schema-level absence of person fields
+- best effort forbidden-field scanning to prevent accidental ingestion
+- small cell suppression as a configurable policy step
+
+This is not legal advice. Treat your local policies as the source of truth.
+
+## Repository map
+
+- `phiak/`: installable Python library
+- `phiak/core/`: engine, schemas, privacy checks, plug-in manager
+- `phiak/metrics/`: reference metrics and early warning index math
+- `phiak/plugins/builtin/`: built-in plug-ins (suppression, early warning)
+- `examples/`: configs and sample CSVs
+- `webapp/`: static dashboard
+- `docs/`: mkdocs scaffold and privacy documentation
+
+## License
+
+MIT. See `LICENSE`.

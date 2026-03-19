@@ -1,0 +1,2 @@
+[console_scripts]
+phiak = phiak.cli:app
