@@ -1,4 +1,21 @@
-# ARES-E: Agentic Resilience & Evaluation System for Essential-Infrastructure
+# Project-Aegis-OI (Organoid Intelligence)
+
+**Project-Aegis-OI** is an open-source infrastructure project dedicated to the realization of hybrid bio-digital supercomputing. Rooted in the theoretical and engineering principles of the DaScient Quantum Intelligence framework, this repository serves to bridge the gap between silicon-based AI and the adaptive, low-power dynamics of living neural tissue.
+
+## Vision
+We are moving beyond the von Neumann bottleneck. Organoid intelligence is not merely a metaphor; it is the physical integration of self-organizing biological systems into the compute stack. [cite_start]The aim is not only to explain organoid intelligence, but to help build the intellectual and institutional architecture within which it may develop responsibly[cite: 21].
+
+## Core Capabilities
+* **Living Data Center Infrastructure:** Automated microfluidic perfusion and orbital maturation protocols.
+* **3D Volumetric Interfacing:** Flexible mesh electronics and optogenetic calibration for closed-loop control.
+* **Active Inference Architecture:** Variational free-energy minimization logic enabling biological tissues to act as adaptive robotic controllers and reservoir computers.
+* **Existential Resilience:** Low-power, decentralized network topologies designed for extreme supply chain and grid-failure resilience.
+
+## Getting Started
+Please refer to `SETUP.md` for instructions on local deployment, including hardware requirements for the Biological Rack Units (BRUs) and API keys for the digital orchestration layers.
+
+
+# [INCLUDING] ARES-E: Agentic Resilience & Evaluation System for Essential-Infrastructure
 
 ### The DaScient Integrated Infrastructure Suite (EWIS, WOIK, PHIAK)
 
