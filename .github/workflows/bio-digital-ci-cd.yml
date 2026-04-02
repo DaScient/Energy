@@ -1,0 +1,25 @@
+name: Bio-Digital Control Validation
+on: [push, pull_request]
+
+jobs:
+  validate-loops:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Simulation Environment
+        run: pip install -r requirements.txt
+
+      - name: Test Hodgkin-Huxley Dynamics
+        run: pytest tests/test_hodgkin_huxley_dynamics.py
+        # Validates membrane voltage balance using:
+        # C_m * dV/dt = I_ext - g_Na*m^3*h(V - E_Na) - g_K*n^4(V - E_K) - g_L(V - E_L) [cite: 909]
+
+      - name: Verify Closed-Loop Latency
+        run: python src/distributed_routing/verify_latency.py
+        # Ensures signal delay τ = L / v remains within training tolerances [cite: 928]
+
+      - name: Spike Detection Quality Audit
+        run: python src/signal_processing/audit_spike_sorting.py
+        # Validates event-detection pipelines against raw electrophysiology benchmarks [cite: 893]
