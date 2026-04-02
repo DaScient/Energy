@@ -1,0 +1,23 @@
+{
+  "mesh_specifications": {
+    "material": "SU-8 photoresist",
+    "conductor": "Nanoporous Gold (np-Au)",
+    "thickness_nm": 800,
+    "flexibility_modulus_mpa": 2.5,
+    "geometry": {
+      "type": "spherical_web",
+      "strut_width_um": 10,
+      "pore_size_um": 150,
+      "total_coverage_area_percent": 85.0
+    },
+    "electrode_sites": {
+      "total_channels": 1024,
+      "impedance_kohm_at_1khz": 25.0,
+      "spatial_distribution": "fibonacci_lattice"
+    },
+    "tissue_interface": {
+      "chronic_coupling_optimization": true,
+      "mechanical_stress_reduction": "enabled"
+    }
+  }
+}
