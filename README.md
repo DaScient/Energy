@@ -128,6 +128,19 @@ jupyter lab
 
 MIT - see `LICENSE`.
 
+
+## License
+
+MIT License — see [LICENSE](LICENSE) for details.
+
+---
+
+**[DaScient, LLC](https://dascient.com)** — *Systematically addressing deep tech issues in critical infrastructure*
+
+[GitHub](https://github.com/DaScient) · [ARES-E@dascient.com](mailto:ARES-E@dascient.com)
+
+---
+
 ## Disclaimer
 
 Planning-grade analytics and operational scaffolding. Not a substitute for facility engineering, safety review, or regulatory compliance.
