@@ -11,6 +11,19 @@ ARES-E is a unified evaluation harness and toolkit designed to standardize telem
 
 EWIS is a plug-and-play Python toolkit for operators and researchers managing the intersection of high-performance compute (HPC) and energy markets.
 
+## Live Dashboard
+
+**[Launch Dashboard →](https://dascient.github.io/ARES-E/)**
+
+The analytics dashboard provides a single-pane-of-glass operational view across all three modules with:
+- Real-time streaming telemetry (synthetic data engine at 0.5 Hz)
+- 18 configurable threshold alert rules with deduplication
+- 8 interactive Chart.js visualizations (dual-axis, radar, area, bar)
+- LOE composite benchmark scorecard
+- 12-week score forecasting with 95% confidence intervals
+- DDIL simulation results summary
+- 100% client-side — zero backend, zero tracking, zero PII/PHI
+
 ### Key Capabilities:
 
 * **Grid & Market Intelligence:** Standardizes payloads for grid stress signals, carbon intensity, and real-time energy pricing.
