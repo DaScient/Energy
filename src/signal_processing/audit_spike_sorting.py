@@ -23,11 +23,15 @@ logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 # ---------------------------------------------------------------------------
 # Quality thresholds
 # ---------------------------------------------------------------------------
-DETECTION_TOLERANCE_FRAMES = 30   # ±1 ms at 30 kHz
+DETECTION_TOLERANCE_FRAMES = 30   # ±30 frames (±1 ms at 30 kHz)
 MAX_FALSE_NEGATIVE_RATE    = 0.10  # at most 10 % of ground-truth spikes missed
 MAX_FALSE_POSITIVE_RATE    = 0.10  # at most 10 % of detections are spurious
 
 SAMPLING_RATE_HZ = 30_000
+
+# Benchmark timing constants (in frames at SAMPLING_RATE_HZ)
+BENCHMARK_DURATION_FRAMES  = 30_000  # 1 second
+BENCHMARK_SPIKE_INTERVAL_FRAMES = 3_000  # 100 ms between spikes
 
 
 # ---------------------------------------------------------------------------
@@ -164,7 +168,7 @@ BENCHMARKS = [
     ("Single spike — low noise",    [15_000],                    30_000, 0.05, 0.9),
     ("Multiple spikes — low noise", [5_000, 12_000, 20_000, 27_000], 30_000, 0.05, 0.9),
     ("Single spike — high noise",   [15_000],                    30_000, 0.20, 0.9),
-    ("Dense spikes — medium noise", list(range(3_000, 30_000, 3_000)), 30_000, 0.10, 0.9),
+    ("Dense spikes — medium noise", list(range(BENCHMARK_SPIKE_INTERVAL_FRAMES, BENCHMARK_DURATION_FRAMES, BENCHMARK_SPIKE_INTERVAL_FRAMES)), BENCHMARK_DURATION_FRAMES, 0.10, 0.9),
 ]
 
 
