@@ -4,13 +4,6 @@
 
 ARES-E is a unified evaluation harness and toolkit designed to standardize telemetry, events, and operational metrics across the "Critical Quad" of national security: **Data/Energy, Water, and Public Health.** This suite provides the deterministic engines, plug-in architectures, and privacy-aware schemas necessary to evaluate AI agents and human-machine teams under real-world operational stress.
 
-
-## [EWIS: Energy, Weather, and Interoperability Suite](https://github.com/DaScient/Energy/tree/main/ewis-toolkit)
-
-**Focus:** Data Center Planning, Grid Operations, and AI Workload Efficiency.
-
-EWIS is a plug-and-play Python toolkit for operators and researchers managing the intersection of high-performance compute (HPC) and energy markets.
-
 ## Live Dashboard
 
 **[Launch Dashboard →](https://dascient.github.io/ARES-E/)**
@@ -23,6 +16,12 @@ The analytics dashboard provides a single-pane-of-glass operational view across 
 - 12-week score forecasting with 95% confidence intervals
 - DDIL simulation results summary
 - 100% client-side — zero backend, zero tracking, zero PII/PHI
+
+## [EWIS: Energy, Weather, and Interoperability Suite](https://github.com/DaScient/Energy/tree/main/ewis-toolkit)
+
+**Focus:** Data Center Planning, Grid Operations, and AI Workload Efficiency.
+
+EWIS is a plug-and-play Python toolkit for operators and researchers managing the intersection of high-performance compute (HPC) and energy markets.
 
 ### Key Capabilities:
 
