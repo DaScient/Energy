@@ -6,7 +6,7 @@ ARES-E is a unified evaluation harness and toolkit designed to standardize telem
 
 ## Live Dashboard
 
-**[Launch Dashboard →](https://dascient.github.io/ARES-E/)**
+**[Launch Dashboard →](https://dascient.github.io/Energy/)**
 
 The analytics dashboard provides a single-pane-of-glass operational view across all three modules with:
 - Real-time streaming telemetry (synthetic data engine at 0.5 Hz)
